@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import Layout from './layout/layout';
 import Link from 'next/link';
 import { getList } from '../services/post-service';
@@ -70,7 +70,7 @@ const Home: NextPage<MyProps> = (props) => {
 	);
 };
 
-export const getStaticProps: GetStaticProps<MyProps> = async () => {
+export const getServerSideProps: GetServerSideProps<MyProps> = async () => {
 	const posts = await getList();
 	// console.log(posts);
 	return {
