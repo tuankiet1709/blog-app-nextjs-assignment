@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import Image from 'next/image';
 import Layout from './layout/layout';
 
 const Contact: NextPage = () => {

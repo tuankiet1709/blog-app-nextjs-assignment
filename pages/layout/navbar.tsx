@@ -29,13 +29,13 @@ const NavBar: NextPage = () => {
 							<Link href="/">Home</Link>
 						</li>
 						<li>
-							<Link href="/components/about">About</Link>
+							<Link href="/about">About</Link>
 						</li>
 						<li>
-							<Link href="/components/post">Sample Post</Link>
+							<Link href="/post">Sample Post</Link>
 						</li>
 						<li>
-							<Link href="/components/contact">Contact</Link>
+							<Link href="/contact">Contact</Link>
 						</li>
 					</ul>
 				</div>

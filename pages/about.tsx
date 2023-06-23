@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import Image from 'next/image';
 import Layout from './layout/layout';
 
 const About: NextPage = () => {
@@ -7,12 +6,12 @@ const About: NextPage = () => {
 	const title = 'About Me';
 	const subTitle = 'This is what I do.';
 
-   return (
-      <Layout
-         backgroundImage={backgroundImage}
-         title={title}
-         subTitle={subTitle}
-         post={false}
+	return (
+		<Layout
+			backgroundImage={backgroundImage}
+			title={title}
+			subTitle={subTitle}
+			post={false}
 		>
 			<div className="container">
 				<div className="row">

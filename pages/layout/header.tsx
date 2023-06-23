@@ -13,7 +13,7 @@ const Header: NextPage<HeaderProps> = ({
 	title,
 	subTitle,
 	meta,
-	post
+	post,
 }) => {
 	return (
 		<header
@@ -31,9 +31,14 @@ const Header: NextPage<HeaderProps> = ({
 							</div>
 						) : (
 							<div className="post-heading">
-									<h1>{ title }</h1>
-									<h2 className="subheading">{ subTitle }</h2>
-									<span className="meta">{ meta }</span>
+								<h1>{title}</h1>
+								<h2 className="subheading">{subTitle}</h2>
+								<span
+									className="meta"
+									dangerouslySetInnerHTML={{
+										__html: meta!,
+									}}
+								></span>
 							</div>
 						)}
 					</div>

@@ -1,12 +1,10 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
-import '../styles/clean-blog.min.css';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import 'jquery/dist/jquery.min.js';
-// import 'bootstrap/dist/js/bootstrap.min.js';
+
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	<Head>
@@ -27,10 +25,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 			rel="stylesheet"
 			type="text/css"
 		/>
+
+		<script async src="jquery/dist/jquery.min.js"></script>
+		<script async src="bootstrap/dist/js/bootstrap.min.js"></script>
+		<script async src="../js/jqBootstrapValidation.js"></script>
+		<script async src="../js/contact_me.js"></script>
+		<script async src="../js/clean-blog.min.js"></script>
 	</Head>;
 
 	const router = useRouter();
-	console.log(pageProps);
 	return <Component {...pageProps} key={router.route} />;
 }
 
